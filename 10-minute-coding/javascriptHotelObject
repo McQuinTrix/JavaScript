@@ -1,0 +1,21 @@
+function CustomerBooking(id,name,room) {
+   this.id = id;
+   this.name = name;
+   this.room = room;
+};
+
+function Hotel(){
+   this.arr = new Array();
+};
+
+Hotel.prototype.addCustomers = function(id,name,room){
+   arr[id] = new CustomerBooking(id,name,room);
+};
+
+var fourSeasons = new Hotel();
+
+fourSeasons.addCustomers(1,"Harshal Carpenter", 100);
+
+//Testing
+fourSeasons.arr.forEach(function(i,j,k){console.log(i);});
+//Output: CustomerBooking {id: 1, name: "Harshal Carpenter", room: 100}
