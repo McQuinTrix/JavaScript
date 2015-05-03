@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS playground</title>
+  </head>
+  <body>
+    <form name="form1">
+      Username: <input name="username" value="Enter Your Username" type="text" maxlength="10"></input>
+      Password: <input name="password" value="numerickey" type="password"></input>
+      <input type="submit" onclick="sub()"/>
+    </form>
+    <script type="text/javascript">
+        var username = document.form1.elements.username;
+	username.onblur = function(){if(username.value.match(/\W/g)){console.log("Enter a proper username"); username.focus();}};
+	username.onfocus = function(){username.value ="";};
+        var password = document.form1.elements.password;
+	password.onblur = function(){if(password.value.match(/\D/g)){console.log("Enter a proper username"); password.focus();}};
+	password.onfocus = function(){password.value ="";};
+    </script>
+  </body>
+</html>
